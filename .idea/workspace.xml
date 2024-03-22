@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dcca62ae-80c0-4e79-b000-789fbc5d65a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/ConnectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/BFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/CustomEvaluator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/DFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/Traversal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/EdgePath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/IntervalMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/QueryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/QueryParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/tue/neobench/query/QueryParserTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2dubBBbZo7aa4j1R9iOLKKJ7I9R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConnectionTest.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.QueryParserTest.testQueryParsing.executor": "Run",
+    "JUnit.TraversalTest.testTraversalAPI.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.TraversalTest.testTraversalAPI">
+    <configuration name="ConnectionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.tue.neobench.ConnectionTest" />
+      <module name="neo4jBench" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tue.neobench.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.tue.neobench.Main" />
+      <module name="neo4jBench" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tue.neobench.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueryParserTest.testQueryParsing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="neo4jBench" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tue.neobench.query.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.tue.neobench.query" />
+      <option name="MAIN_CLASS_NAME" value="org.tue.neobench.query.QueryParserTest" />
+      <option name="METHOD_NAME" value="testQueryParsing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TraversalTest.testTraversalAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="neo4jBench" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tue.neobench.query.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.tue.neobench.query" />
+      <option name="MAIN_CLASS_NAME" value="org.tue.neobench.query.TraversalTest" />
+      <option name="METHOD_NAME" value="testTraversalAPI" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TraversalTest.testTraversalAPI" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.QueryParserTest.testQueryParsing" />
+        <item itemvalue="Application.ConnectionTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-e47b9c39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dcca62ae-80c0-4e79-b000-789fbc5d65a6" name="Changes" comment="" />
+      <created>1710860773906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710860773906</updated>
+      <workItem from="1710860775406" duration="970000" />
+      <workItem from="1710918981573" duration="4311000" />
+      <workItem from="1711032406886" duration="304000" />
+      <workItem from="1711092165364" duration="15055000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
