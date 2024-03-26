@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcca62ae-80c0-4e79-b000-789fbc5d65a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/CustomPathExpander.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/QueryRes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/CypherRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/LowLevelRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/TraversalRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/tue/neobench/query/TraversalRunnerTest.java" afterDir="false" />
+    <list default="true" id="dcca62ae-80c0-4e79-b000-789fbc5d65a6" name="Changes" comment="Added traversal api's implementation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/CustomEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/CustomEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/Traversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/CypherRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/CypherRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,11 +161,24 @@
       <workItem from="1711032406886" duration="304000" />
       <workItem from="1711092165364" duration="15250000" />
       <workItem from="1711178933473" duration="1049000" />
-      <workItem from="1711438115112" duration="14166000" />
+      <workItem from="1711438115112" duration="16555000" />
     </task>
+    <task id="LOCAL-00001" summary="Added traversal api's implementation.">
+      <option name="closed" value="true" />
+      <created>1711458031823</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711458031824</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added traversal api's implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added traversal api's implementation." />
   </component>
 </project>
