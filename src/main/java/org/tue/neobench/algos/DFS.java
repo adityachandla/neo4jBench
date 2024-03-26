@@ -4,6 +4,7 @@ import org.neo4j.graphdb.Label;
 import org.neo4j.graphdb.RelationshipType;
 import org.neo4j.graphdb.Transaction;
 import org.tue.neobench.query.EdgePath;
+import org.tue.neobench.query.QueryRes;
 
 import java.util.*;
 
@@ -14,8 +15,8 @@ public class DFS implements Traversal {
         this.paths = paths;
     }
 
-    public long getRunningTime(long startNode, Transaction tx) {
-        List<Long> result = new ArrayList<>();
+    public QueryRes getQueryRes(long startNode, Transaction tx) {
+        Set<Long> result = new HashSet<>();
         Deque<NodeLevel> dfsStack = new LinkedList<>();
         Set<NodeLevel> seen = new HashSet<>();
         dfsStack.push(new NodeLevel(startNode, 0));
@@ -27,7 +28,7 @@ public class DFS implements Traversal {
             var rels = node.getRelationships(pathInfo.dir(), RelationshipType.withName(pathInfo.label()));
             for (var rel : rels) {
                 var nodeId = (Long) rel.getOtherNode(node).getProperty("uid");
-                var nodeLevel = new NodeLevel(nodeId, toProcess.level()+1);
+                var nodeLevel = new NodeLevel(nodeId, toProcess.level() + 1);
                 if (nodeLevel.level() == paths.size()) {
                     result.add(nodeId);
                 } else if (!seen.contains(nodeLevel)) {
@@ -36,7 +37,8 @@ public class DFS implements Traversal {
                 }
             }
         }
-        return (System.nanoTime() - start)/1000;
+        System.out.println(result.size());
+        return new QueryRes((System.nanoTime() - start) / 1000, result.size());
     }
 
     private record NodeLevel(long node, int level) {

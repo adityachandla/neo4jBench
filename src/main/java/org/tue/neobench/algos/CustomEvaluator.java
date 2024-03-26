@@ -11,24 +11,23 @@ import org.tue.neobench.query.EdgePath;
 import java.util.List;
 
 @AllArgsConstructor
+@Deprecated
 public class CustomEvaluator implements Evaluator {
 
     private final List<EdgePath> pathList;
+
     @Override
     public Evaluation evaluate(Path path) {
         int pathLength = path.length();
         if (path.length() == 0) {
             return Evaluation.EXCLUDE_AND_CONTINUE;
         }
-        if (pathLength > pathList.size()) {
-            return Evaluation.EXCLUDE_AND_PRUNE;
-        }
         if (pathLength == pathList.size() && isSame(path.lastRelationship(), pathList.getLast())) {
             return Evaluation.INCLUDE_AND_PRUNE;
         } else if (pathLength == pathList.size()) {
             return Evaluation.EXCLUDE_AND_PRUNE;
         }
-        var edgeToMatch = pathList.get(pathLength-1);
+        var edgeToMatch = pathList.get(pathLength - 1);
         if (isSame(path.lastRelationship(), edgeToMatch)) {
             return Evaluation.EXCLUDE_AND_CONTINUE;
         }

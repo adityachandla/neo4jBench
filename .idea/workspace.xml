@@ -5,26 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcca62ae-80c0-4e79-b000-789fbc5d65a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/ConnectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/BFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/CustomEvaluator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/DFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/Traversal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/EdgePath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/IntervalMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/QueryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/QueryParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/tue/neobench/query/QueryParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/CustomPathExpander.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/query/QueryRes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/CypherRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/LowLevelRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/TraversalRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/tue/neobench/query/TraversalRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/CustomEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/CustomEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/Traversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/Traversal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -60,6 +55,7 @@
     "Application.ConnectionTest.executor": "Run",
     "Application.Main.executor": "Run",
     "JUnit.QueryParserTest.testQueryParsing.executor": "Run",
+    "JUnit.TraversalRunnerTest.traversalTest.executor": "Run",
     "JUnit.TraversalTest.testTraversalAPI.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -73,7 +69,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TraversalTest.testTraversalAPI">
+  <component name="RunManager" selected="JUnit.TraversalRunnerTest.traversalTest">
     <configuration name="ConnectionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.tue.neobench.ConnectionTest" />
       <module name="neo4jBench" />
@@ -116,6 +112,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TraversalRunnerTest.traversalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="neo4jBench" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tue.neobench.query.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.tue.neobench.query" />
+      <option name="MAIN_CLASS_NAME" value="org.tue.neobench.query.TraversalRunnerTest" />
+      <option name="METHOD_NAME" value="traversalTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TraversalTest.testTraversalAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="neo4jBench" />
       <extension name="coverage">
@@ -134,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TraversalRunnerTest.traversalTest" />
         <item itemvalue="JUnit.TraversalTest.testTraversalAPI" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.QueryParserTest.testQueryParsing" />
@@ -159,7 +172,9 @@
       <workItem from="1710860775406" duration="970000" />
       <workItem from="1710918981573" duration="4311000" />
       <workItem from="1711032406886" duration="304000" />
-      <workItem from="1711092165364" duration="15055000" />
+      <workItem from="1711092165364" duration="15250000" />
+      <workItem from="1711178933473" duration="1049000" />
+      <workItem from="1711438115112" duration="14166000" />
     </task>
     <servers />
   </component>

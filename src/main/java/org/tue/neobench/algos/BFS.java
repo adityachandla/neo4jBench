@@ -4,20 +4,22 @@ import org.neo4j.graphdb.Label;
 import org.neo4j.graphdb.RelationshipType;
 import org.neo4j.graphdb.Transaction;
 import org.tue.neobench.query.EdgePath;
+import org.tue.neobench.query.QueryRes;
 
 import java.util.*;
 
 public class BFS implements Traversal {
     private final List<EdgePath> paths;
+
     public BFS(List<EdgePath> paths) {
         this.paths = paths;
     }
 
-    public long getRunningTime(long startNode, Transaction tx) {
+    public QueryRes getQueryRes(long startNode, Transaction tx) {
         Queue<Long> bfsQueue = new LinkedList<>();
         bfsQueue.add(startNode);
         long start = System.nanoTime();
-        for (var path: paths) {
+        for (var path : paths) {
             Queue<Long> nextQueue = new LinkedList<>();
             Set<Long> seen = new HashSet<>();
             while (!bfsQueue.isEmpty()) {
@@ -34,6 +36,6 @@ public class BFS implements Traversal {
             }
             bfsQueue = nextQueue;
         }
-        return (System.nanoTime()-start)/1000;
+        return new QueryRes((System.nanoTime() - start) / 1000, bfsQueue.size());
     }
 }
