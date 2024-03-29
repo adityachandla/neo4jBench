@@ -1,7 +1,7 @@
 package org.tue.neobench.runners;
 
-import lombok.AllArgsConstructor;
 import org.apache.commons.cli.CommandLine;
+import org.neo4j.dbms.api.DatabaseManagementService;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.Label;
 import org.neo4j.graphdb.traversal.Evaluators;
@@ -17,11 +17,18 @@ import org.tue.neobench.query.QueryRes;
 import java.util.List;
 import java.util.Random;
 
-@AllArgsConstructor
 public class TraversalRunner implements Runner {
-    private GraphDatabaseService db;
-    private CommandLine cli;
-    private Random r;
+    private final GraphDatabaseService db;
+    private final DatabaseManagementService managementService;
+    private final CommandLine cli;
+    private final Random r;
+
+    public TraversalRunner(CommandLine cli, Random r) {
+        this.managementService = Util.getManagementService();
+        this.db = Util.getGraphDb(this.managementService);
+        this.cli = cli;
+        this.r = r;
+    }
 
     private static int countNodes(Traverser t) {
         int i = 0;
@@ -66,11 +73,15 @@ public class TraversalRunner implements Runner {
                 case "DFS" -> tx.traversalDescription().depthFirst();
                 default -> throw new IllegalArgumentException();
             };
-            //Uniqueness can be made Uniqueness.NONE, and we can filter nodes in the end.
             return desc
                     .uniqueness(Uniqueness.NODE_LEVEL)
                     .evaluator(Evaluators.atDepth(query.paths().size()))
                     .expand(new CustomPathExpander(query.paths()));
         }
+    }
+
+    @Override
+    public void close() throws Exception {
+        managementService.shutdown();
     }
 }

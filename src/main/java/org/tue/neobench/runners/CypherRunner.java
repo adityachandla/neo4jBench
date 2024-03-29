@@ -1,7 +1,6 @@
 package org.tue.neobench.runners;
 
-import lombok.AllArgsConstructor;
-import org.apache.commons.cli.CommandLine;
+import org.neo4j.dbms.api.DatabaseManagementService;
 import org.neo4j.graphdb.Direction;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.tue.neobench.Constants;
@@ -14,11 +13,16 @@ import java.util.Map;
 import java.util.Random;
 
 
-@AllArgsConstructor
 public class CypherRunner implements Runner {
-    private GraphDatabaseService db;
-    private CommandLine cli;
-    private Random r;
+    private final GraphDatabaseService db;
+    private final DatabaseManagementService managementService;
+    private final Random r;
+
+    public CypherRunner(Random r) {
+        this.managementService = Util.getManagementService();
+        this.db = Util.getGraphDb(this.managementService);
+        this.r = r;
+    }
 
     private static final String queryStart = "Match (n:NODE {uid: $id})";
     private static final String queryEnd = " return count (distinct d.uid) as cnt";
@@ -27,7 +31,7 @@ public class CypherRunner implements Runner {
     public void runQueries(List<QueryDTO> queries) {
         var intervalMap = IntervalMap.fromFile(Util.getResourceInputStream("nodeMap1.csv"));
         int queryIdx = 1;
-        for (var query: queries) {
+        for (var query : queries) {
             var interval = intervalMap.valueOf(query.startNodeName());
             var queryStr = generateCypher(query);
             for (int i = 0; i < Constants.REPETITION; i++) {
@@ -44,10 +48,10 @@ public class CypherRunner implements Runner {
         try (var tx = db.beginTx()) {
             var start = System.nanoTime();
             var res = tx.execute(query, Map.of("id", startNodeId));
-            var duration = (System.nanoTime()-start)/1000;
+            var duration = (System.nanoTime() - start) / 1000;
             Map<String, Object> row = res.next();
-            long countString = (Long)row.get("cnt");
-            return new QueryRes(duration, (int)countString);
+            long countString = (Long) row.get("cnt");
+            return new QueryRes(duration, (int) countString);
         }
     }
 
@@ -65,7 +69,7 @@ public class CypherRunner implements Runner {
             } else {
                 q.append('-');
             }
-            if (i == query.paths().size()-1) {
+            if (i == query.paths().size() - 1) {
                 q.append("(d:NODE)");
             } else {
                 q.append("()");
@@ -73,5 +77,10 @@ public class CypherRunner implements Runner {
         }
         q.append(queryEnd);
         return q.toString();
+    }
+
+    @Override
+    public void close() throws Exception {
+        managementService.shutdown();
     }
 }

@@ -1,7 +1,9 @@
+bin/
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+trialGraph/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

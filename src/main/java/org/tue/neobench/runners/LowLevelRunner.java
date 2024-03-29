@@ -1,7 +1,7 @@
 package org.tue.neobench.runners;
 
-import lombok.AllArgsConstructor;
 import org.apache.commons.cli.CommandLine;
+import org.neo4j.dbms.api.DatabaseManagementService;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.tue.neobench.Constants;
 import org.tue.neobench.algos.BFS;
@@ -14,11 +14,18 @@ import org.tue.neobench.query.QueryDTO;
 import java.util.List;
 import java.util.Random;
 
-@AllArgsConstructor
 public class LowLevelRunner implements Runner {
-    private GraphDatabaseService db;
-    private CommandLine cli;
-    private Random r;
+    private final GraphDatabaseService db;
+    private final DatabaseManagementService managementService;
+    private final CommandLine cli;
+    private final Random r;
+
+    public LowLevelRunner(CommandLine cli, Random r) {
+        this.managementService = Util.getManagementService();
+        this.db = Util.getGraphDb(this.managementService);
+        this.cli = cli;
+        this.r = r;
+    }
 
     @Override
     public void runQueries(List<QueryDTO> queries) {
@@ -49,6 +56,11 @@ public class LowLevelRunner implements Runner {
             }
             queryIdx++;
         }
+    }
+
+    @Override
+    public void close() throws Exception {
+        managementService.shutdown();
     }
 
     @FunctionalInterface

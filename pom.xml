@@ -12,18 +12,20 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <neo4j.version>5.17.0</neo4j.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.neo4j</groupId>
             <artifactId>neo4j</artifactId>
-            <version>5.17.0</version>
+            <version>${neo4j.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.neo4j.driver/neo4j-java-driver -->
         <dependency>
             <groupId>org.neo4j.driver</groupId>
             <artifactId>neo4j-java-driver</artifactId>
-            <version>5.17.0</version>
+            <version>${neo4j.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>

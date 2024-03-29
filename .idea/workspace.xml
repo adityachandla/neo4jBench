@@ -4,9 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcca62ae-80c0-4e79-b000-789fbc5d65a6" name="Changes" comment="Added traversal api's implementation.">
+    <list default="true" id="dcca62ae-80c0-4e79-b000-789fbc5d65a6" name="Changes" comment="Added cypher runner.">
+      <change afterPath="$PROJECT_DIR$/runner.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/GdsRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/PregelRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/ConnectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/algos/BFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/algos/CustomEvaluator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/algos/CustomPathExpander.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/algos/DFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/algos/Traversal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/query/EdgePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/query/IntervalMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/query/QueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/query/QueryParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/query/QueryRes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/runners/CypherRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/runners/LowLevelRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/runners/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/runners/TraversalRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/org/tue/neobench/runners/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/test/java/org/tue/neobench/query/QueryParserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/test/java/org/tue/neobench/query/TraversalRunnerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/ConnectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/algos/DFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/CypherRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/CypherRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/LowLevelRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/LowLevelRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/TraversalRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/TraversalRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tue/neobench/runners/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +53,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,26 +73,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ConnectionTest.executor": "Run",
-    "Application.Main.executor": "Run",
-    "JUnit.QueryParserTest.testQueryParsing.executor": "Run",
-    "JUnit.TraversalRunnerTest.traversalTest.executor": "Run",
-    "JUnit.TraversalTest.testTraversalAPI.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ConnectionTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.QueryParserTest.testQueryParsing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TraversalRunnerTest.traversalTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TraversalTest.testTraversalAPI.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/aditya/Documents/projects/neo4jPregel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.TraversalRunnerTest.traversalTest">
+}</component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ConnectionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.tue.neobench.ConnectionTest" />
       <module name="neo4jBench" />
@@ -73,6 +110,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.tue.neobench.Main" />
       <module name="neo4jBench" />
+      <option name="PROGRAM_PARAMETERS" value="-m pregel -a BFS" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.tue.neobench.*" />
@@ -131,11 +169,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ConnectionTest" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.QueryParserTest.testQueryParsing" />
+      <item itemvalue="JUnit.TraversalRunnerTest.traversalTest" />
+      <item itemvalue="JUnit.TraversalTest.testTraversalAPI" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TraversalRunnerTest.traversalTest" />
         <item itemvalue="JUnit.TraversalTest.testTraversalAPI" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.QueryParserTest.testQueryParsing" />
         <item itemvalue="Application.ConnectionTest" />
       </list>
@@ -161,7 +206,10 @@
       <workItem from="1711032406886" duration="304000" />
       <workItem from="1711092165364" duration="15250000" />
       <workItem from="1711178933473" duration="1049000" />
-      <workItem from="1711438115112" duration="16555000" />
+      <workItem from="1711438115112" duration="16714000" />
+      <workItem from="1711525939144" duration="2813000" />
+      <workItem from="1711529832332" duration="27000" />
+      <workItem from="1711700656739" duration="7352000" />
     </task>
     <task id="LOCAL-00001" summary="Added traversal api's implementation.">
       <option name="closed" value="true" />
@@ -171,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711458031824</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added cypher runner.">
+      <option name="closed" value="true" />
+      <created>1711462112266</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711462112266</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +235,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added traversal api's implementation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added traversal api's implementation." />
+    <MESSAGE value="Added cypher runner." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added cypher runner." />
   </component>
 </project>

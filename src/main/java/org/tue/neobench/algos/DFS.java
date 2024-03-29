@@ -37,7 +37,6 @@ public class DFS implements Traversal {
                 }
             }
         }
-        System.out.println(result.size());
         return new QueryRes((System.nanoTime() - start) / 1000, result.size());
     }
 
